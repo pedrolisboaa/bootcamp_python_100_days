@@ -43,7 +43,6 @@ def make_coffee(drink_name, order_ingredients):
     print(f'Here is your {drink_name} ☕')
 
 
-
 while True:
 
     asking = input('What would you like? (espresso/latte/cappuccino): ').lower()
@@ -60,4 +59,3 @@ while True:
             payment = process_coins()
             if is_transaction_successful(payment, drink['cost']):
                 make_coffee(asking, drink['ingredients'])
-
