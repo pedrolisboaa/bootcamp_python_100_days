@@ -1,21 +1,23 @@
-from turtle import Turtle, Screen
-from random import randint, choice
+import turtle as t
+import random
 
-CORES = ['medium blue', 'red', 'green', 'black', 'orange red', 'medium violet red', 'gold', 'khaki', 'dark olive green']
 
-t = Turtle(shape='circle')
-t.shapesize()
-t.pensize(12)
+t.colormode(255)
+def random_colors():
+    r = random.randint(0, 255)
+    g = random.randint(0, 255)
+    b = random.randint(0, 255)
+    return r, g, b,
+
+
+tim = t.Turtle(shape='circle')
+tim.shapesize()
+tim.pensize(12)
+
 while True:
-    t.pencolor(choice(CORES))
-    t.setheading(choice([0, 180, 270]))
-    t.forward(choice(list(range(50, 101))))
+    tim.color(random_colors())
+    tim.setheading(random.choice([0, 180, 270]))
+    tim.forward(random.choice(list(range(50, 101))))
 
-
-
-
-
-
-
-
-screen = Screen().exitonclick()
+screen = t.Screen()
+screen.exitonclick()
