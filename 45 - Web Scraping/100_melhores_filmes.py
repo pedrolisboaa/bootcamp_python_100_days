@@ -9,3 +9,5 @@ todos_titulos_de_filmes = sopa.select('h3.title')
 with open('filmes.txt', 'w+', encoding='utf-8') as arquivo:
     for titulo in todos_titulos_de_filmes:
         arquivo.write(f'{titulo.string}\n')
+
+print('FIM')
