@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Blog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="{{ url_for('index') }}">HOME</a></li>
+            <li><a href="{{url_for('blog') }}">BLOG</a></li>
+            <li><a href="{{url_for('pergunta', nome='pedro') }}">PERGUNTA</a></li>
+        </ul>
+    </nav>
+
+    {% for post in posts: %}
+        {% if post["id"] == 2 %}
+            <h2>{{ post['title'] }}</h2>
+            <h3>{{ post['subtitle'] }}</h3>
+            <h4>{{ post['body'] }}</h4>
+        {% endif %}
+    {% endfor %}
+
+</body>
+</html>
